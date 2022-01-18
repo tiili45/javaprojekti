@@ -20,8 +20,9 @@ public class LenkkikalenteriMain extends Application {
 			Scene scene = new Scene(root,400,300);
 			scene.getStylesheets().add(getClass().getResource("lenkkikalenteri.css").toExternalForm());
 			primaryStage.setScene(scene);
-			//primaryStage.getIcons().add(new Image("https://gitlab.jyu.fi/kolarjjy/ohj2/-/blob/master/kuvat/aloitus.jpg"));
-            primaryStage.setTitle("Lenkkikalenteri");
+			primaryStage.setResizable(false);
+			primaryStage.getIcons().add(new Image("/juoksija.png"));
+            primaryStage.setTitle("Kirjautuminen");
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();

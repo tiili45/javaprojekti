@@ -1,7 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.BorderPane?>
-	
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxLenkkikalenteri.LenkkikalenteriGUIController">
-	<!-- TODO Add Nodes -->
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxLenkkikalenteri.KirjautuminenGUIController">
+   <center>
+      <HBox prefHeight="1080.0" prefWidth="1920.0" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Tiedosto">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Tallenna" />
+                  <MenuItem mnemonicParsing="false" text="Avaa..." />
+                  <MenuItem mnemonicParsing="false" text="Tulosta..." />
+                  <MenuItem mnemonicParsing="false" text="Lopeta" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Muokkaa">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Lisää uusi lenkki" />
+                  <MenuItem mnemonicParsing="false" text="Poista lenkki..." />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Tilastot">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Kilometrit..." />
+                  <MenuItem mnemonicParsing="false" text="Keskisyke..." />
+                  <MenuItem mnemonicParsing="false" text="Fiilis..." />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Apua">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Apua" />
+                  <MenuItem mnemonicParsing="false" text="Tietoja" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
 </BorderPane>
