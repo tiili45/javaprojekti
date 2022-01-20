@@ -1,13 +1,21 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 
-.button {
+#avaaKalenteriButton, #luoUusiKalenteriButton, #ikkunaLuoKalenteriButton, .button {
 	-fx-background-color: #93cfeb;
 }
 
-.button:hover {
-	-fx-background-color: white;
+#avaaKalenteriButton:hover, #luoUusiKalenteriButton:hover, #ikkunaLuoKalenteriButton:hover, .button:hover  {
+	-fx-background-color: #ebdc93; 
+} 
+
+#paaIkkuna {
+	-fx-background-color: #ebb193;
 }
 
-.button2 {
-	-fx-background-color: black;
+#ylaValikko {
+	-fx-background-color: #93cfeb;
 }
+
+/* #kestoArea {
+	-fx-control-inner-background: #ebdc93;
+} */

@@ -2,7 +2,6 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
@@ -28,19 +27,12 @@
             </Label>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="400.0" style="-fx-background-color: #ebb193;">
                <children>
-                  <Button id="button" fx:id="avaaKalenteriButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleAvaaKalenteri" prefWidth="109.33" text="Avaa kalenteri">
-                     <effect>
-                        <DropShadow height="10.0" radius="4.5" width="10.0" />
-                     </effect></Button>
+                  <Button fx:id="avaaKalenteriButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleAvaaKalenteri" prefWidth="109.33" style="-fx-border-color: black;" text="Avaa kalenteri" />
                </children>
             </HBox>
             <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #ebb193;">
                <children>
-                  <Button id="button" alignment="CENTER" mnemonicParsing="false" onAction="#handleLuoKalenteri" text="Luo uusi kalenteri">
-                     <effect>
-                        <DropShadow height="10.0" radius="4.5" width="10.0" />
-                     </effect>
-                  </Button>
+                  <Button fx:id="luoUusiKalenteriButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleLuoKalenteri" style="-fx-border-color: black;" text="Luo uusi kalenteri" />
                </children>
             </HBox>
          </children>

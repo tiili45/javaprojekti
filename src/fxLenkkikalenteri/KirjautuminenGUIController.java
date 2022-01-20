@@ -3,13 +3,14 @@
  */
 package fxLenkkikalenteri;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import fi.jyu.mit.fxgui.Dialogs;
 import fi.jyu.mit.fxgui.ModalController;
 import fi.jyu.mit.fxgui.ModalControllerInterface;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -32,32 +33,39 @@ public class KirjautuminenGUIController implements Initializable, ModalControlle
     private Button avaaKalenteriButton;
     
     @FXML
+    private Button luoUusiKalenteriButton;
+    
+    @FXML
     private Button ikkunaLuoKalenteriButton;
     
     @FXML
     void handleAvaaKalenteri() {
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Avaa tiedosto"); 
-        fileChooser.getExtensionFilters().add(
-                new ExtensionFilter("Dat tiedostot", "*.dat"));
-        fileChooser.showOpenDialog(avaaKalenteriButton.getParent().getScene().getWindow());
-        try {
-        BorderPane ikkuna = (BorderPane)FXMLLoader.load(getClass().getResource("Lenkkikalenteri.fxml"));
-        Scene scene2 = new Scene(ikkuna,800,500);
-        scene2.getStylesheets().add(getClass().getResource("lenkkikalenteri.css").toExternalForm());
-        Stage paaikkuna = new Stage();
-        paaikkuna.setScene(scene2);
-        paaikkuna.setResizable(false);
-        paaikkuna.getIcons().add(new Image("/juoksija.png"));
-        paaikkuna.setTitle("Lenkkikalenteri");
-        paaikkuna.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        //FileChooser fileChooser = new FileChooser();
+        //fileChooser.setTitle("Avaa tiedosto"); 
+        //fileChooser.getExtensionFilters().add(
+                //new ExtensionFilter("Dat tiedostot", "*.dat"));
+        //File valittuTiedosto = fileChooser.showOpenDialog(null);
+        //avaaKalenteriButton.getParent().getScene().getWindow()
+        //if (valittuTiedosto != null) {
+            try {
+                BorderPane ikkuna = (BorderPane)FXMLLoader.load(getClass().getResource("Lenkkikalenteri.fxml"));
+                Scene scene2 = new Scene(ikkuna,820,500);
+                scene2.getStylesheets().add(getClass().getResource("lenkkikalenteri.css").toExternalForm());
+                Stage paaikkuna = new Stage();
+                paaikkuna.setScene(scene2);
+                paaikkuna.setResizable(false);
+                paaikkuna.getIcons().add(new Image("/juoksija.png"));
+                paaikkuna.setTitle("Lenkkikalenteri");
+                paaikkuna.show();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                Stage kirjautuminen = (Stage) avaaKalenteriButton.getScene().getWindow();
+                kirjautuminen.close();
 
-        Stage kirjautuminen = (Stage) avaaKalenteriButton.getScene().getWindow();
-        kirjautuminen.close();
-
+        //}   //else {
+                //Dialogs.showMessageDialog("tiedostoa ei voi avata, valitse toinen tiedosto");
+        //}
 
     }
 
