@@ -38,7 +38,7 @@
                         <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" style="-fx-border-color: black;" text="Hae" />
                      </children>
                   </HBox>
-                  <ListChooser prefHeight="277.0" prefWidth="199.0" rivit="Jokke&#10;Moi&#10;" style="-fx-border-color: black;">
+                  <ListChooser prefHeight="277.0" prefWidth="199.0" rivit="Iltalenkki&#10;Aamulenkki&#10;Hiihtolenkki&#10;" style="-fx-border-color: black;">
                      <VBox.margin>
                         <Insets left="25.0" right="10.0" />
                      </VBox.margin></ListChooser>
