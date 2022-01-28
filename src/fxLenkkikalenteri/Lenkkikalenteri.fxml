@@ -42,7 +42,7 @@
                      <VBox.margin>
                         <Insets left="25.0" right="10.0" />
                      </VBox.margin></ListChooser>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="215.0" style="-fx-border-color: black;" text="Lisää lenkki...">
+                  <Button mnemonicParsing="false" onAction="#handleLisaaLenkki" prefHeight="25.0" prefWidth="215.0" style="-fx-border-color: black;" text="Lisää lenkki...">
                      <VBox.margin>
                         <Insets bottom="10.0" left="25.0" right="10.0" top="10.0" />
                      </VBox.margin>
@@ -172,12 +172,12 @@
                      <children>
                         <TextField style="-fx-border-color: black;">
                            <HBox.margin>
-                              <Insets right="5.0" top="31.0" />
+                              <Insets right="5.0" top="29.0" />
                            </HBox.margin>
                         </TextField>
                         <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="61.0" style="-fx-border-color: black;" text="Muuta">
                            <HBox.margin>
-                              <Insets top="31.0" />
+                              <Insets top="29.0" />
                            </HBox.margin>
                         </Button>
                      </children>

@@ -72,7 +72,7 @@ public class KirjautuminenGUIController implements Initializable, ModalControlle
     @FXML
     void handleLuoKalenteri() {
         ModalController.showModal(KirjautuminenGUIController.class.getResource("Luouusikalenteri.fxml"),
-                "Luo uusi kalenteri", null, "");
+                "Luo uusi kalenteri", null, ""); 
 
     }
     

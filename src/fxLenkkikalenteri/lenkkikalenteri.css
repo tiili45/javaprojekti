@@ -2,6 +2,7 @@
 
 #avaaKalenteriButton, #luoUusiKalenteriButton, #ikkunaLuoKalenteriButton, .button {
 	-fx-background-color: #93cfeb;
+	-fx-border-color: black;
 }
 
 #avaaKalenteriButton:hover, #luoUusiKalenteriButton:hover, #ikkunaLuoKalenteriButton:hover, .button:hover  {
@@ -19,3 +20,15 @@
 /* #kestoArea {
 	-fx-control-inner-background: #ebdc93;
 } */
+
+.text-field {
+	-fx-border-color: black;
+}
+
+#tallennaLenkki, #peruutaLenkki {
+	-fx-background-color: #ebb193;
+}
+
+#tallennaLenkki:hover, #peruutaLenkki:hover {
+	-fx-background-color: #ebdc93;
+}
