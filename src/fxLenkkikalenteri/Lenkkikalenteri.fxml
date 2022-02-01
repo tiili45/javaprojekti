@@ -223,9 +223,7 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Tilastot">
             <items>
-              <MenuItem mnemonicParsing="false" text="Kilometrit..." />
-                  <MenuItem mnemonicParsing="false" text="Keskisyke..." />
-                  <MenuItem mnemonicParsing="false" text="Fiilis..." />
+              <MenuItem mnemonicParsing="false" text="Näytä Tilastot..." />
             </items>
           </Menu>
             <Menu mnemonicParsing="false" text="Apua">

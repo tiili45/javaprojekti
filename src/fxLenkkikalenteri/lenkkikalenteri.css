@@ -23,6 +23,29 @@
 
 .text-field {
 	-fx-border-color: black;
+	-fx-border-radius: 15;
+	-fx-background-radius: 15;
+}
+
+.text-area {
+	-fx-border-radius: 15;
+	-fx-background-radius: 15;
+	-fx-background-color: white;
+}
+
+.text-area .scroll-pane {
+    -fx-background-color: transparent;
+}
+.text-area .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+.text-area .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+
+.button {
+	-fx-border-radius: 15;
+	-fx-background-radius: 15;
 }
 
 #tallennaLenkki, #peruutaLenkki {
