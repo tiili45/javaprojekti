@@ -1,29 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17">
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <center>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="250.0" style="-fx-background-color: #93cfeb;;" BorderPane.alignment="TOP_LEFT">
          <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <ImageView fitHeight="46.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="39.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../kuvat/juoksija.png" />
                      </image>
                   </ImageView>
-                  <Label text="Lenkkikalenteri" />
+                  <Label text="Lenkkikalenteri">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font></Label>
                </children>
             </HBox>
-            <Label text="Label" />
-            <Label text="Label" />
+            <Label text="Versio 1.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></Label>
+            <Label text="Juuso Kolari">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin></Label>
          </children>
       </VBox>
    </center>

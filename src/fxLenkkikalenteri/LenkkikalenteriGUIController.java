@@ -46,6 +46,18 @@ public class LenkkikalenteriGUIController {
     }
 
     @FXML
+    void handleLisaaLaji() {
+        ModalController.showModal(KirjautuminenGUIController.class.getResource("Lisaalaji.fxml"),
+                "Lisää laji", null, "");
+    }
+    
+    @FXML
+    void handleLisaaReitti() {
+        ModalController.showModal(KirjautuminenGUIController.class.getResource("Lisaareitti.fxml"),
+                "Lisää reitti", null, "");
+    }
+    
+    @FXML
     void handleLopeta() {
         Platform.exit();
     }
