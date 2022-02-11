@@ -135,41 +135,57 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <TextField style="-fx-border-color: black;" GridPane.columnIndex="1">
+                        <TextField promptText="Iltalenkki" style="-fx-border-color: black;" GridPane.columnIndex="1">
                            <GridPane.margin>
                               <Insets right="50.0" />
                            </GridPane.margin>
                         </TextField>
-                        <TextField style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <TextField prefHeight="28.0" prefWidth="100.0" promptText="30" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <GridPane.margin>
-                              <Insets right="50.0" />
+                              <Insets right="90.0" />
                            </GridPane.margin>
                         </TextField>
-                        <TextField style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                           <GridPane.margin>
-                              <Insets right="50.0" />
-                           </GridPane.margin>
-                        </TextField>
-                        <TextField style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                           <GridPane.margin>
-                              <Insets right="50.0" />
-                           </GridPane.margin>
-                        </TextField>
-                        <TextField style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="4">
-                           <GridPane.margin>
-                              <Insets right="50.0" />
-                           </GridPane.margin>
-                        </TextField>
-                        <TextField style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="5">
-                           <GridPane.margin>
-                              <Insets right="50.0" />
-                           </GridPane.margin>
-                        </TextField>
-                        <TextArea maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="98.0" prefWidth="181.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                        <TextArea maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="98.0" prefWidth="181.0" promptText="Hyvällä fiiliksellä menttin, uudet lenkkarit toimii oikein hyvin!" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="6">
                            <GridPane.margin>
                               <Insets bottom="32.0" right="50.0" top="10.0" />
                            </GridPane.margin>
                         </TextArea>
+                        <Label text="min" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="150.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="104.0" layoutY="126.0" prefHeight="28.0" prefWidth="100.0" promptText="140" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets right="90.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Label text="bpm" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="150.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField layoutX="104.0" layoutY="22.0" promptText="Hiihto" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets right="50.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField promptText="Laajavuori10" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets right="50.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField promptText="Hyvä" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <GridPane.margin>
+                              <Insets right="50.0" />
+                           </GridPane.margin>
+                        </TextField>
                      </children>
                   </GridPane>
                </children>
@@ -206,7 +222,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <ChoiceBox prefWidth="150.0" GridPane.columnIndex="1">
+                        <ChoiceBox prefWidth="150.0" style="-fx-background-color: white;" GridPane.columnIndex="1">
                            <GridPane.margin>
                               <Insets right="25.0" />
                            </GridPane.margin>
@@ -216,7 +232,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <DatePicker fx:id="paivamaaraAlkaen" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <GridPane.margin>
                               <Insets right="25.0" />
                            </GridPane.margin>
@@ -226,7 +242,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="2">
+                        <DatePicker fx:id="paivamaaraPaattyen" style="-fx-background-color: white;" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <GridPane.margin>
                               <Insets right="25.0" />
                            </GridPane.margin>
@@ -263,26 +279,26 @@
           <Menu mnemonicParsing="false" text="Tiedosto">
             <items>
               <MenuItem mnemonicParsing="false" text="Tallenna" />
-                  <MenuItem mnemonicParsing="false" text="Avaa..." />
-                  <MenuItem mnemonicParsing="false" text="Tulosta..." />
+                  <MenuItem fx:id="avaaTiedostoValikko" mnemonicParsing="false" onAction="#handleAvaaTiedostoValikko" text="Avaa..." />
+                  <MenuItem mnemonicParsing="false" onAction="#handleTulostaValikko" text="Tulosta..." />
                   <MenuItem mnemonicParsing="false" onAction="#handleLopeta" text="Lopeta" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Muokkaa">
             <items>
-              <MenuItem mnemonicParsing="false" text="Lisää uusi lenkki" />
+              <MenuItem mnemonicParsing="false" onAction="#handleLisaaLenkki" text="Lisää uusi lenkki" />
                   <MenuItem mnemonicParsing="false" text="Poista lenkki..." />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Tilastot">
             <items>
-              <MenuItem mnemonicParsing="false" text="Näytä Tilastot..." />
+              <MenuItem fx:id="avaaTilastoValikko" mnemonicParsing="false" onAction="#handleAvaaTilastoValikko" text="Näytä Tilastot..." />
             </items>
           </Menu>
             <Menu mnemonicParsing="false" text="Apua">
                <items>
                   <MenuItem mnemonicParsing="false" text="Apua" />
-                  <MenuItem mnemonicParsing="false" text="Tietoja" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleAvaaTiedotValikko" text="Tietoja" />
                </items>
             </Menu>
         </menus>

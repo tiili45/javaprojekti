@@ -1,4 +1,3 @@
-/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
 
 #avaaKalenteriButton, #luoUusiKalenteriButton, #ikkunaLuoKalenteriButton, .button {
 	-fx-background-color: #93cfeb;
@@ -17,20 +16,31 @@
 	-fx-background-color: #93cfeb;
 }
 
-/* #kestoArea {
-	-fx-control-inner-background: #ebdc93;
-} */
 
 .text-field {
 	-fx-border-color: black;
-	-fx-border-radius: 15;
-	-fx-background-radius: 15;
+	-fx-border-radius: 5;
+	-fx-background-radius: 5;
 }
 
 .text-area {
-	-fx-border-radius: 15;
-	-fx-background-radius: 15;
+	-fx-border-radius: 5;
+	-fx-background-radius: 5;
 	-fx-background-color: white;
+}
+
+.choice-box {
+	-fx-border-color: black;
+	-fx-border-radius: 5;
+	-fx-background-radius: 5;
+} 
+
+#paivamaaraAlkaen, #paivamaaraPaattyen {
+	-fx-border-color: black;
+	-fx-border-radius: 5;
+	-fx-background-radius: 5;
+	-fx-background-color: white;
+	-fx-control-inner-background: white;
 }
 
 .text-area .scroll-pane {
@@ -44,8 +54,8 @@
 }
 
 .button {
-	-fx-border-radius: 15;
-	-fx-background-radius: 15;
+	-fx-border-radius: 5;
+	-fx-background-radius: 5;
 }
 
 #tallennaLenkki, #peruutaLenkki {
@@ -54,4 +64,8 @@
 
 #tallennaLenkki:hover, #peruutaLenkki:hover {
 	-fx-background-color: #ebdc93;
+}
+
+#tulostaTausta {
+	-fx-background-color: #ebb193;
 }

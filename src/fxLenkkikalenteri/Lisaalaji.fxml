@@ -12,7 +12,7 @@
 
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17">
    <center>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #93cfeb;;" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #93cfeb;;" BorderPane.alignment="CENTER">
          <children>
             <Label text="Lisää laji">
                <font>
