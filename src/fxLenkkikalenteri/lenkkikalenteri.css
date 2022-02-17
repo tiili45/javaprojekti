@@ -17,11 +17,11 @@
 }
 
 
-.text-field {
+/*  .text-field {
 	-fx-border-color: black;
 	-fx-border-radius: 5;
-	-fx-background-radius: 5;
-}
+	-fx-background-radius: 5; 
+}*/
 
 .text-area {
 	-fx-border-radius: 5;

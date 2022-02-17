@@ -29,6 +29,9 @@ import javafx.stage.Stage;
  */
 public class KirjautuminenGUIController implements Initializable, ModalControllerInterface<String> {
     
+    /*
+     * Kirjautumis-ikkunan 2 buttonia, avautuvan luo uusi kalenteri ikkunan 1 button
+     */
     @FXML
     private Button avaaKalenteriButton;
     
@@ -38,6 +41,11 @@ public class KirjautuminenGUIController implements Initializable, ModalControlle
     @FXML
     private Button ikkunaLuoKalenteriButton;
     
+    
+    /*
+     * Kirjautuminen ikkunan avaa kalenteri buttonin toiminnot, kysyy ensin tiedoston
+     * mikä halutaan avata ja sitten avaa kalenterin pääikkunan.
+     */
     @FXML
     void handleAvaaKalenteri() {
         //FileChooser fileChooser = new FileChooser();
@@ -69,17 +77,39 @@ public class KirjautuminenGUIController implements Initializable, ModalControlle
 
     }
 
+    /*
+     * Kirjautuminen-ikkunan luo uusi kalenteri -buttonin toiminnot, avaa 
+     * ikkunan kalenterin luomista varten. 
+     */
     @FXML
     void handleLuoKalenteri() {
-        ModalController.showModal(KirjautuminenGUIController.class.getResource("Luouusikalenteri.fxml"),
-                "Luo uusi kalenteri", null, ""); 
+        try {
+            BorderPane paneluouusi = (BorderPane)FXMLLoader.load(getClass().getResource("Luouusikalenteri.fxml"));
+            Scene sceneluouusi = new Scene(paneluouusi,200,150);
+            sceneluouusi.getStylesheets().add(getClass().getResource("lenkkikalenteri.css").toExternalForm());
+            Stage stageluouusi = new Stage();
+            stageluouusi.setScene(sceneluouusi);
+            stageluouusi.setResizable(false);
+            stageluouusi.getIcons().add(new Image("/juoksija.png"));
+            stageluouusi.setTitle("Uusi kalenteri");
+            stageluouusi.show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
     }
     
+    /*
+     * Luo uusi kalenteri-ikkunan luo-button toiminnot
+     */
     @FXML
-    void handleIkkunaLuoKalenteri() {
-        //
+    void handleLuoUusiKalenteri() {
+        Dialogs.showMessageDialog("ei toimi vielä");
+        Stage luouusi = (Stage) ikkunaLuoKalenteriButton.getScene().getWindow();
+        luouusi.close();
     }
+    
+    /** Automaattisesti luodut metodit **/
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {

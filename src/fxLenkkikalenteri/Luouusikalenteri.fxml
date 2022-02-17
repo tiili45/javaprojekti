@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -25,17 +24,11 @@
                      <HBox.margin>
                         <Insets bottom="10.0" left="30.0" right="5.0" />
                      </HBox.margin>
-                     <effect>
-                        <DropShadow height="10.0" radius="4.5" width="10.0" />
-                     </effect>
                   </TextField>
-                  <Button mnemonicParsing="false" text="Luo">
+                  <Button fx:id="ikkunaLuoKalenteriButton" mnemonicParsing="false" onAction="#handleLuoUusiKalenteri" text="Luo">
                      <HBox.margin>
                         <Insets bottom="10.0" />
                      </HBox.margin>
-                     <effect>
-                        <DropShadow height="10.0" radius="4.5" width="10.0" />
-                     </effect>
                   </Button>
                </children>
             </HBox>
